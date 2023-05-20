@@ -1,6 +1,8 @@
 # BungeeMessaging
 Little API/Plugin to make BungeeCord messaging simpler.
 
+[Javadoc](https://bungeelib.cooleg.me/)
+
 Import API into your plugins (Maven):
 ```xml
 <repositories>
