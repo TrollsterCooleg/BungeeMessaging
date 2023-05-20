@@ -13,7 +13,7 @@ import javax.annotation.Nonnull;
 /**
  * Event triggered when message is received on BungeeCord channel. <br>
  * Only supports message types in either {@link MessageType} or {@link ForwardMessageType}. <br>
- * <b>Please don't trigger this event yourself unless you know what you are doing.<b/>
+ * <b>Please don't trigger this event yourself unless you know what you are doing.</b>
  */
 public class IncomingPluginMessageEvent extends Event {
     private static final HandlerList handlers = new HandlerList();

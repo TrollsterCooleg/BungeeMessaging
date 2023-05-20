@@ -45,7 +45,7 @@ public class BungeeMessageOut implements ByteArrayDataOutput {
     }
 
     /**
-     * <b>For internal use only.<b/>
+     * <b>For internal use only.</b>
      */
     @Deprecated
     public static void setPlugin(@Nonnull Plugin sendingPlugin) {

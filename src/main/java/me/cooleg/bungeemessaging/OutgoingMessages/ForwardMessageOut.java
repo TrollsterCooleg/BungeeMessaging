@@ -21,7 +21,7 @@ public class ForwardMessageOut extends BungeeMessageOut {
     /**
      * Initialize a ForwardMessage instead of a regular old BungeeMessage.
      *
-     * @see <a href="https://www.spigotmc.org/wiki/bukkit-bungee-plugin-messaging-channel/">Bungee Message Channel Info<a/>
+     * @see <a href="https://www.spigotmc.org/wiki/bukkit-bungee-plugin-messaging-channel/">Bungee Message Channel Info</a>
      * @param player For sending any plugin messages, you need a player to send it through. This doesn't matter in most cases.
      * @param type Is this message going to a server, or to a player?
      * @param target If this is to a server, you can specify a server name, "ONLINE" for online servers, or "ALL" for all servers. If this is to a player, put their name.
