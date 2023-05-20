@@ -1,5 +1,5 @@
 name: BungeeMessaging
 version: '${project.version}'
-description: "API to make dealing with BungeeCord plugin messaging easier."
+description: "API to make dealing with BungeeCord plugin messaging easier/simpler."
 main: me.cooleg.bungeemessaging.BungeeMessaging
 api-version: 1.14
