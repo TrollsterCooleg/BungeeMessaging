@@ -18,7 +18,7 @@ import javax.annotation.Nonnull;
 public class IncomingPluginMessageEvent extends Event {
     private static final HandlerList handlers = new HandlerList();
     private final Player player;
-    private final MessageType type;
+    private MessageType type;
     private final BungeeMessageIn message;
 
     /**
@@ -29,15 +29,17 @@ public class IncomingPluginMessageEvent extends Event {
         this.player = player;
         ByteArrayDataInput data = ByteStreams.newDataInput(bytes);
         String subChannel = data.readUTF();
-        this.type = MessageType.valueOf(subChannel);
-        switch (subChannel) {
-            case "FORWARD":
-            case "FORWARDTOPLAYER":
-                this.message = new ForwardMessageIn(data, ForwardMessageType.valueOf(subChannel));
-                break;
-            default:
-                this.message = new BungeeMessageIn(data, type);
-                break;
+
+        try {
+            this.type = MessageType.valueOf(subChannel);
+        } catch (IllegalArgumentException ex) {
+            this.type = MessageType.FORWARD;
+        }
+
+        if (type == MessageType.FORWARD) {
+            this.message = new ForwardMessageIn(data, subChannel);
+        } else {
+            this.message = new BungeeMessageIn(data, type);
         }
     }
 

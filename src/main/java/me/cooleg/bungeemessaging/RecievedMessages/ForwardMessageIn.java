@@ -14,11 +14,11 @@ import javax.annotation.Nonnull;
 public class ForwardMessageIn extends BungeeMessageIn {
     private final String channelName;
     private final short dataLength;
-    public ForwardMessageIn(@Nonnull ByteArrayDataInput data, @Nonnull ForwardMessageType type) {
-        super(data, MessageType.valueOf(type.toString()));
+    public ForwardMessageIn(@Nonnull ByteArrayDataInput data, String channelName) {
+        super(data, MessageType.FORWARD);
         // Make sure all the data is up to-date before reading from it.
         ByteArrayDataInput info = this.getData();
-        channelName = info.readUTF();
+        this.channelName = channelName;
         dataLength = info.readShort();
     }
 
