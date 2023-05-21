@@ -1,7 +1,6 @@
 package me.cooleg.bungeemessaging.RecievedMessages;
 
 import com.google.common.io.ByteArrayDataInput;
-import me.cooleg.bungeemessaging.MessageEnums.ForwardMessageType;
 import me.cooleg.bungeemessaging.MessageEnums.MessageType;
 
 import javax.annotation.Nonnull;
