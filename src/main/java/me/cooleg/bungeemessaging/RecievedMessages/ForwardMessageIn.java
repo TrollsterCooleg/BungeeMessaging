@@ -14,7 +14,7 @@ public class ForwardMessageIn extends BungeeMessageIn {
     private final String channelName;
     private final short dataLength;
     public ForwardMessageIn(@Nonnull ByteArrayDataInput data, String channelName) {
-        super(data, MessageType.FORWARD);
+        super(data, MessageType.Forward);
         // Make sure all the data is up to-date before reading from it.
         ByteArrayDataInput info = this.getData();
         this.channelName = channelName;

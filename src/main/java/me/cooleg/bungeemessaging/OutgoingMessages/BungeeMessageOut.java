@@ -39,7 +39,7 @@ public class BungeeMessageOut implements ByteArrayDataOutput {
      */
     public void sendMessage() {
         final ByteArrayDataOutput data = ByteStreams.newDataOutput();
-        data.writeUTF(type.getSubChannel());
+        data.writeUTF(type.toString());
         data.write(out.toByteArray());
         player.sendPluginMessage(plugin, "BungeeCord", data.toByteArray());
     }

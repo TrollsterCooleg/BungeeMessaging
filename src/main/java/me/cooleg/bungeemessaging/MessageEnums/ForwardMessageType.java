@@ -5,6 +5,6 @@ package me.cooleg.bungeemessaging.MessageEnums;
  * with a non-compatible message type, feels like something I shouldn't let happen.
  */
 public enum ForwardMessageType {
-    FORWARD,
-    FORWARDTOPLAYER;
+    Forward,
+    ForwardToPlayer;
 }

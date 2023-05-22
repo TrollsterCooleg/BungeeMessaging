@@ -33,10 +33,10 @@ public class IncomingPluginMessageEvent extends Event {
         try {
             this.type = MessageType.valueOf(subChannel);
         } catch (IllegalArgumentException ex) {
-            this.type = MessageType.FORWARD;
+            this.type = MessageType.Forward;
         }
 
-        if (type == MessageType.FORWARD) {
+        if (type == MessageType.Forward) {
             this.message = new ForwardMessageIn(data, subChannel);
         } else {
             this.message = new BungeeMessageIn(data, type);

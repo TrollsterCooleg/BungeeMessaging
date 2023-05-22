@@ -37,7 +37,7 @@ public class ForwardMessageOut extends BungeeMessageOut {
     public void sendMessage() {
         final ByteArrayDataOutput data = ByteStreams.newDataOutput();
         // Tell it what type of forwarding we are doing
-        data.writeUTF(type.getSubChannel());
+        data.writeUTF(type.toString());
         // For who or what server it is for
         data.writeUTF(target);
         // Say what type of message this is
