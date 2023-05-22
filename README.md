@@ -15,7 +15,7 @@ Import API into your plugins (Maven):
     <dependency>
         <groupId>com.github.TrollsterCooleg</groupId>
         <artifactId>BungeeMessaging</artifactId>
-        <version>v1.1.0</version>
+        <version>v1.1.1</version>
         <scope>provided</scope>
     </dependency>
 </dependencies>
@@ -27,6 +27,6 @@ repositories {
     maven { url 'https://jitpack.io' }
 }
 dependencies {
-    compileOnly 'com.github.TrollsterCooleg:BungeeMessaging:v1.1.0'
+    compileOnly 'com.github.TrollsterCooleg:BungeeMessaging:v1.1.1'
 }
 ```
